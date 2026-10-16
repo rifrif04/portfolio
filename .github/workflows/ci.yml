@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate HTML & Assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check required files exist
+        run: |
+          for f in index.html app.js style.css; do
+            if [ ! -f "$f" ]; then
+              echo "Missing required file: $f"
+              exit 1
+            fi
+          done
+          echo "All required files present."
+
+      - name: Validate HTML
+        run: npx --yes htmlhint "*.html"
+
+      - name: Check for broken internal links
+        run: |
+          echo "Scanning index.html for missing local asset references..."
+          grep -oE '(src|href)="[^"]+"' index.html | sed -E 's/.*="([^"]*)"/\1/' | grep -vE '^(https?:|mailto:|tel:|#|javascript:|data:)' | while read -r ref; do
+            path="${ref%%\?*}"
+            path="${path%%\#*}"
+            [ -z "$path" ] && continue
+            if [ ! -e "$path" ]; then
+              echo "Missing asset: $path"
+              exit 1
+            fi
+          done
+          echo "No broken local links found."

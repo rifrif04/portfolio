@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhamad Syarif Hidayatulloh | IT Infrastructure & Network Engineer</title>
+  <meta name="description" content="Portofolio Profesional Muhamad Syarif Hidayatulloh - IT Infrastructure & Network Engineer spesialisasi Virtualization, Enterprise Systems, Cybersecurity, dan High Availability.">
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+
+  <!-- Terapkan tema tersimpan sebelum render (hindari kedipan) -->
+  <script>
+    (function () {
+      var saved;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var isDark = saved ? saved === 'dark' : true;
+      document.documentElement.classList.toggle('dark', isDark);
+    })();
+  </script>
+</head>
+
+<body class="cyber-grid relative selection:bg-cyan-500 selection:text-black">
+
+  <!-- Ambient Light Orbs -->
+  <div class="fixed top-1/4 -left-48 w-96 h-96 bg-cyan-600/10 rounded-full blur-[128px] pointer-events-none"></div>
+  <div class="fixed bottom-1/4 -right-48 w-96 h-96 bg-emerald-600/10 rounded-full blur-[128px] pointer-events-none"></div>
+
+  <!-- Komponen dimuat otomatis oleh app.js -->
+  <div id="nav"></div>
+  <div id="hero"></div>
+  <div id="about"></div>
+  <div id="skills"></div>
+  <div id="projects"></div>
+  <div id="gallery"></div>
+  <div id="terminal"></div>
+  <div id="experience"></div>
+  <div id="contact"></div>
+  <div id="footer"></div>
+
+  <!-- Loader Komponen -->
+  <script src="theme.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

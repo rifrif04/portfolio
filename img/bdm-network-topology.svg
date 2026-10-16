@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-label="Perancangan Topologi Jaringan Dual-Bridge vmbr0 vmbr1">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0f1d"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <pattern id="grid1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg1)"/>
+  <rect width="800" height="450" fill="url(#grid1)"/>
+  <rect x="24" y="24" width="752" height="402" rx="18" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="10 8" opacity="0.6"/>
+  <g fill="none" stroke="#22d3ee" stroke-width="4" transform="translate(360,110)">
+    <rect x="0" y="0" width="80" height="60" rx="8"/>
+    <circle cx="22" cy="20" r="7" fill="#22d3ee" stroke="none"/>
+    <path d="M0 50 L28 30 L48 46 L64 32 L80 48"/>
+  </g>
+  <text x="400" y="240" text-anchor="middle" fill="#e2e8f0" font-family="'Segoe UI',Arial,sans-serif" font-size="25" font-weight="700">Perancangan Topologi Jaringan Dual-Bridge</text>
+  <text x="400" y="274" text-anchor="middle" fill="#7c8aa0" font-family="'Segoe UI',Arial,sans-serif" font-size="15">Lampiran Dokumentasi — PT Bagong Dekaka Makmur</text>
+  <text x="400" y="304" text-anchor="middle" fill="#22d3ee" font-family="'Fira Code','Courier New',monospace" font-size="13">[ Ganti dengan foto / capture asli ]</text>
+</svg>

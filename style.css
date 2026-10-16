@@ -1,0 +1,156 @@
+/* Custom Cyber Effects */
+body {
+  background-color: #070b14;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.glass-card {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.15);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.35);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070b14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+/* ===================================================== */
+/* LIGHT THEME (aktif saat <html> tidak punya class .dark) */
+/* ===================================================== */
+html:not(.dark) body {
+  background-color: #eef2f7;
+  color: #0f172a;
+}
+
+html:not(.dark) .cyber-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+html:not(.dark) .glass-card {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+html:not(.dark) .glass-card:hover {
+  border-color: rgba(6, 182, 212, 0.45);
+  box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.2);
+}
+
+html:not(.dark) .text-glow {
+  text-shadow: none;
+}
+
+/* Scrollbar */
+html:not(.dark) ::-webkit-scrollbar-track { background: #e2e8f0; }
+html:not(.dark) ::-webkit-scrollbar-thumb { background: #cbd5e1; }
+html:not(.dark) ::-webkit-scrollbar-thumb:hover { background: #06b6d4; }
+
+/* Teks netral */
+html:not(.dark) .text-white { color: #0f172a; }
+html:not(.dark) .text-slate-200 { color: #1e293b; }
+html:not(.dark) .text-slate-300 { color: #334155; }
+html:not(.dark) .text-slate-400 { color: #52627a; }
+html:not(.dark) .text-slate-500 { color: #7c8aa0; }
+
+/* Teks aksen (lebih gelap agar terbaca di latar terang) */
+html:not(.dark) .text-cyan-400 { color: #0891b2; }
+html:not(.dark) .text-cyan-300 { color: #0e7490; }
+html:not(.dark) .text-cyan-400\/80 { color: rgba(8, 145, 178, 0.85); }
+html:not(.dark) .text-emerald-400 { color: #059669; }
+html:not(.dark) .text-emerald-300 { color: #047857; }
+html:not(.dark) .text-teal-400 { color: #0d9488; }
+html:not(.dark) .text-teal-300 { color: #0f766e; }
+html:not(.dark) .text-amber-400 { color: #d97706; }
+html:not(.dark) .text-amber-300 { color: #b45309; }
+html:not(.dark) .text-purple-400 { color: #7c3aed; }
+html:not(.dark) .text-purple-300 { color: #6d28d9; }
+html:not(.dark) .text-blue-400 { color: #2563eb; }
+html:not(.dark) .text-blue-300 { color: #1d4ed8; }
+html:not(.dark) .text-sky-400 { color: #0284c7; }
+html:not(.dark) .text-green-400 { color: #16a34a; }
+html:not(.dark) .text-rose-400 { color: #e11d48; }
+
+/* Latar netral */
+html:not(.dark) .bg-slate-950\/40 { background-color: rgba(226, 232, 240, 0.55); }
+html:not(.dark) .bg-slate-950\/70 { background-color: rgba(255, 255, 255, 0.7); }
+html:not(.dark) .bg-slate-950\/80 { background-color: rgba(255, 255, 255, 0.85); }
+html:not(.dark) .bg-slate-900 { background-color: #f1f5f9; }
+html:not(.dark) .bg-slate-900\/60 { background-color: rgba(241, 245, 249, 0.75); }
+html:not(.dark) .bg-slate-900\/80 { background-color: rgba(241, 245, 249, 0.85); }
+html:not(.dark) .bg-slate-900\/90 { background-color: rgba(241, 245, 249, 0.95); }
+html:not(.dark) .bg-slate-800 { background-color: #cbd5e1; }
+html:not(.dark) .bg-\[\#070b14\]\/95 { background-color: rgba(241, 245, 249, 0.95); }
+html:not(.dark) .bg-\[\#0a0f1d\] { background-color: #ffffff; }
+
+/* Badge kategori (bg-*-950 + text-*-300) */
+html:not(.dark) .bg-cyan-950 { background-color: #cffafe; }
+html:not(.dark) .bg-emerald-950 { background-color: #d1fae5; }
+html:not(.dark) .bg-teal-950 { background-color: #ccfbf1; }
+html:not(.dark) .bg-amber-950 { background-color: #fef3c7; }
+html:not(.dark) .bg-purple-950 { background-color: #f3e8ff; }
+html:not(.dark) .bg-blue-950 { background-color: #dbeafe; }
+
+/* Border */
+html:not(.dark) .border-slate-900 { border-color: #dbe3ec; }
+html:not(.dark) .border-slate-800 { border-color: #dbe3ec; }
+html:not(.dark) .border-slate-800\/80 { border-color: rgba(203, 213, 225, 0.8); }
+html:not(.dark) .border-slate-700 { border-color: #cbd5e1; }
+html:not(.dark) .border-\[\#070b14\] { border-color: #eef2f7; }
+html:not(.dark) .border-cyan-800 { border-color: #67e8f9; }
+html:not(.dark) .border-emerald-800 { border-color: #6ee7b7; }
+html:not(.dark) .border-teal-800 { border-color: #5eead4; }
+html:not(.dark) .border-amber-800 { border-color: #fcd34d; }
+html:not(.dark) .border-purple-800 { border-color: #d8b4fe; }
+html:not(.dark) .border-blue-800 { border-color: #93c5fd; }
+
+/* Gradien aksen (judul & tombol) */
+html:not(.dark) .from-cyan-400 { --tw-gradient-from: #06b6d4; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(6, 182, 212, 0)); }
+html:not(.dark) .via-teal-300 { --tw-gradient-to: rgba(13, 148, 136, 0); --tw-gradient-stops: var(--tw-gradient-from), #0d9488, var(--tw-gradient-to, rgba(13, 148, 136, 0)); }
+html:not(.dark) .to-emerald-400 { --tw-gradient-to: #10b981; }
+
+/* Hover */
+html:not(.dark) .hover\:bg-slate-800:hover { background-color: #e2e8f0; }
+html:not(.dark) .hover\:text-white:hover { color: #0f172a; }
+html:not(.dark) .placeholder\:text-slate-600::placeholder { color: #94a3b8; }
+
+/* Transisi halus saat ganti tema */
+body, .glass-card, .cyber-grid {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
